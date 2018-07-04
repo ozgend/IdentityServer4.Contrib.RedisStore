@@ -32,30 +32,30 @@ namespace IdentityServer4.Armut.RedisStore.Extensions
         {
             get
             {
-                return string.IsNullOrEmpty(this._keyPrefix) ? this._keyPrefix : $"{_keyPrefix}:";
+                return string.IsNullOrEmpty(_keyPrefix) ? _keyPrefix : $"{_keyPrefix}:";
             }
             set
             {
-                this._keyPrefix = value;
+                _keyPrefix = value;
             }
         }
 
         internal RedisOptions()
         {
-            this.multiplexer = GetConnectionMultiplexer();
+            multiplexer = GetConnectionMultiplexer();
         }
 
         private Lazy<IConnectionMultiplexer> GetConnectionMultiplexer()
         {
             return new Lazy<IConnectionMultiplexer>(
-                () => string.IsNullOrEmpty(this.RedisConnectionString)
-                    ? ConnectionMultiplexer.Connect(this.ConfigurationOptions)
-                    : ConnectionMultiplexer.Connect(this.RedisConnectionString));
+                () => string.IsNullOrEmpty(RedisConnectionString)
+                    ? ConnectionMultiplexer.Connect(ConfigurationOptions)
+                    : ConnectionMultiplexer.Connect(RedisConnectionString));
         }
 
         private Lazy<IConnectionMultiplexer> multiplexer = null;
 
-        internal IConnectionMultiplexer Multiplexer => this.multiplexer.Value;
+        internal IConnectionMultiplexer Multiplexer => multiplexer.Value;
     }
 
     /// <summary>
@@ -63,7 +63,35 @@ namespace IdentityServer4.Armut.RedisStore.Extensions
     /// </summary>
     public class RedisOperationalStoreOptions : RedisOptions
     {
+        
+    }
 
+    /// <summary>
+    /// Represents Redis Operational store options.
+    /// </summary>
+    public class RedisConfigurationStoreOptions : RedisOptions
+    {
+        private string _keyPrefixIdentity = string.Empty;
+        private string _keyPrefixApi = string.Empty;
+        private string _keyPrefixClient = string.Empty;
+
+        public string KeyPrefixIdentity
+        {
+            get => string.IsNullOrEmpty(_keyPrefixIdentity) ? _keyPrefixIdentity : $"{_keyPrefixIdentity}:";
+            set => _keyPrefixIdentity = value;
+        }
+
+        public string KeyPrefixApi
+        {
+            get => string.IsNullOrEmpty(_keyPrefixApi) ? _keyPrefixApi : $"{_keyPrefixApi}:";
+            set => _keyPrefixApi = value;
+        }
+
+        public string KeyPrefixClient
+        {
+            get => string.IsNullOrEmpty(_keyPrefixClient) ? _keyPrefixClient : $"{_keyPrefixClient}:";
+            set => _keyPrefixClient = value;
+        }
     }
 
     /// <summary>

@@ -1,10 +1,10 @@
-﻿using IdentityServer4.Contrib.RedisStore;
-using IdentityServer4.Contrib.RedisStore.Cache;
-using IdentityServer4.Contrib.RedisStore.Stores;
+﻿using System;
+using IdentityServer4.Armut.RedisStore.Cache;
+using IdentityServer4.Armut.RedisStore.Stores;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -24,6 +24,24 @@ namespace Microsoft.Extensions.DependencyInjection
 
             builder.Services.AddScoped<RedisMultiplexer<RedisOperationalStoreOptions>>();
             builder.Services.AddTransient<IPersistedGrantStore, PersistedGrantStore>();
+            return builder;
+        }
+
+        /// <summary>
+        /// Add Redis Configuration Store.
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <param name="optionsBuilder">Redis Configuration Store Options builder</param>
+        /// <returns></returns>
+        public static IIdentityServerBuilder AddConfigurationStore(this IIdentityServerBuilder builder, Action<RedisConfigurationStoreOptions> optionsBuilder)
+        {
+            var options = new RedisConfigurationStoreOptions();
+            optionsBuilder?.Invoke(options);
+            builder.Services.AddSingleton(options);
+
+            builder.Services.AddScoped<RedisMultiplexer<RedisConfigurationStoreOptions>>();
+            builder.Services.AddTransient<IClientStore, ClientStore>();
+            builder.Services.AddTransient<IResourceStore, ResourceStore>();
             return builder;
         }
 
