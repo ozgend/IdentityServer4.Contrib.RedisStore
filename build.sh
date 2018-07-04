@@ -11,4 +11,4 @@ export FrameworkPathOverride=$(dirname $(which mono))/../lib/mono/4.5/
 
 dotnet restore IdentityServer4.Armut.RedisStore.sln
 
-dotnet build ./IdentityServer4.Armut.RedisStore.csproj -c Release
+dotnet build ./IdentityServer4.Armut.RedisStore/IdentityServer4.Armut.RedisStore.csproj -c Release

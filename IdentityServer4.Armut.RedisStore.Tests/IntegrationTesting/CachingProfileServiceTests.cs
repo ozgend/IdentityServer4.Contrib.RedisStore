@@ -4,8 +4,6 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using IdentityModel.Client;
 using IdentityServer4.Armut.RedisStore.Cache;
-using IdentityServer4.Armut.RedisStore.Extensions;
-using IdentityServer4.Armut.RedisStore.Tests.Extensions;
 using IdentityServer4.Armut.RedisStore.Tests.Fakes;
 using IdentityServer4.Models;
 using Microsoft.AspNetCore.Builder;

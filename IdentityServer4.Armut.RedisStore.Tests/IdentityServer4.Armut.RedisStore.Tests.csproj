@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityServer4.Contrib.RedisStore\IdentityServer4.Armut.RedisStore.csproj" />
+    <ProjectReference Include="..\IdentityServer4.Armut.RedisStore\IdentityServer4.Armut.RedisStore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

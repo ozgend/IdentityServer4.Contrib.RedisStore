@@ -1,5 +1,6 @@
 ﻿using System;
 using IdentityServer4.Armut.RedisStore.Cache;
+using IdentityServer4.Armut.RedisStore.Extensions;
 using IdentityServer4.Armut.RedisStore.Stores;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
