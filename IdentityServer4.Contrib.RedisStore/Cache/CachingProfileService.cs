@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
-using IdentityServer4.Contrib.RedisStore;
-using IdentityServer4.Models;
-using Microsoft.Extensions.Logging;
+using IdentityServer4.Armut.RedisStore.Extensions;
 using IdentityServer4.Extensions;
+using IdentityServer4.Models;
+using IdentityServer4.Services;
+using Microsoft.Extensions.Logging;
 
-namespace IdentityServer4.Services
+namespace IdentityServer4.Armut.RedisStore.Cache
 {
     /// <summary>
     /// Caching decorator for IProfileService
@@ -36,7 +37,7 @@ namespace IdentityServer4.Services
         /// <returns></returns>
         public async Task GetProfileDataAsync(ProfileDataRequestContext context)
         {
-            await this.inner.GetProfileDataAsync(context).ConfigureAwait(false);
+            await inner.GetProfileDataAsync(context).ConfigureAwait(false);
         }
 
         /// <summary>

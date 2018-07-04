@@ -1,12 +1,10 @@
-﻿using IdentityModel;
-using IdentityServer4.Validation;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
+using IdentityModel;
+using IdentityServer4.Validation;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests.Cache
+namespace IdentityServer4.Armut.RedisStore.Tests.Fakes
 {
     class FakeResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
     {

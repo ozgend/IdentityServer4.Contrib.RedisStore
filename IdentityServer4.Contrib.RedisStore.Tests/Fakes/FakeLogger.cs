@@ -1,9 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Microsoft.Extensions.Logging;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests
+namespace IdentityServer4.Armut.RedisStore.Tests.Fakes
 {
     public class FakeLogger<T> : ILogger<T>
     {

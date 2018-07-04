@@ -1,13 +1,12 @@
-﻿using IdentityServer4.Models;
-using IdentityServer4.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using IdentityServer4.Models;
+using IdentityServer4.Services;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests.Cache
+namespace IdentityServer4.Armut.RedisStore.Tests.Fakes
 {
     public class FakeProfileService : IProfileService
     {

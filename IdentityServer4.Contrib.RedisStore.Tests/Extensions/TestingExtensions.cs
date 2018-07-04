@@ -1,8 +1,7 @@
-﻿using IdentityServer4.Contrib.RedisStore.Tests;
-using IdentityServer4.Contrib.RedisStore.Tests.Cache;
+﻿using IdentityServer4.Armut.RedisStore.Tests.Fakes;
 using IdentityServer4.Services;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

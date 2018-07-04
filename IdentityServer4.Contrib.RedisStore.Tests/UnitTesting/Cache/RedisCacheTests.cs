@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using IdentityServer4.Contrib.RedisStore.Cache;
+using IdentityServer4.Armut.RedisStore.Cache;
+using IdentityServer4.Armut.RedisStore.Extensions;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests.Cache
+namespace IdentityServer4.Armut.RedisStore.Tests.UnitTesting.Cache
 {
     public class RedisCacheTests
     {

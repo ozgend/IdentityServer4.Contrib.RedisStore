@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Linq;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
-using System.Linq;
 
-namespace IdentityServer4.Contrib.RedisStore
+namespace IdentityServer4.Armut.RedisStore.Extensions
 {
     ///<summary>
     /// Represents the Profile Service caching options.
@@ -30,11 +30,11 @@ namespace IdentityServer4.Contrib.RedisStore
         {
             get
             {
-                return string.IsNullOrEmpty(this._keyPrefix) ? this._keyPrefix : $"{_keyPrefix}:";
+                return string.IsNullOrEmpty(_keyPrefix) ? _keyPrefix : $"{_keyPrefix}:";
             }
             set
             {
-                this._keyPrefix = value;
+                _keyPrefix = value;
             }
         }
     }

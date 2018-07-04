@@ -1,11 +1,10 @@
-﻿using IdentityServer4.Services;
+﻿using System;
+using System.Threading.Tasks;
+using IdentityServer4.Services;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests.Cache
+namespace IdentityServer4.Armut.RedisStore.Tests.Fakes
 {
     public class FakeCache<T> : ICache<T> where T : class
     {

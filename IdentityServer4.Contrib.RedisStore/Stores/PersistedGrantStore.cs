@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdentityServer4.Contrib.RedisStore.Stores
+namespace IdentityServer4.Armut.RedisStore.Stores
 {
     /// <summary>
     /// Provides the implementation of IPersistedGrantStore for Redis Cache.

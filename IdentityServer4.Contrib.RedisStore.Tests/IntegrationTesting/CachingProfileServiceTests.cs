@@ -1,18 +1,20 @@
-﻿using FluentAssertions;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using FluentAssertions;
 using IdentityModel.Client;
-using IdentityServer4.Contrib.RedisStore.Tests.Cache;
+using IdentityServer4.Armut.RedisStore.Cache;
+using IdentityServer4.Armut.RedisStore.Extensions;
+using IdentityServer4.Armut.RedisStore.Tests.Extensions;
+using IdentityServer4.Armut.RedisStore.Tests.Fakes;
 using IdentityServer4.Models;
-using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests
+namespace IdentityServer4.Armut.RedisStore.Tests.IntegrationTesting
 {
     public class CachingProfileServiceTests
     {

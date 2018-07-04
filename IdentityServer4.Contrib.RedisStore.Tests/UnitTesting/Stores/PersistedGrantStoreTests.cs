@@ -3,14 +3,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentAssertions;
-using IdentityServer4.Contrib.RedisStore.Stores;
+using IdentityServer4.Armut.RedisStore.Extensions;
+using IdentityServer4.Armut.RedisStore.Stores;
 using IdentityServer4.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests.Stores
+namespace IdentityServer4.Armut.RedisStore.Tests.UnitTesting.Stores
 {
     public class PersistedGrantStoreTests
     {

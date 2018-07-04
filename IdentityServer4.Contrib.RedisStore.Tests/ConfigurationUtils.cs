@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests
+namespace IdentityServer4.Armut.RedisStore.Tests
 {
     public static class ConfigurationUtils
     {

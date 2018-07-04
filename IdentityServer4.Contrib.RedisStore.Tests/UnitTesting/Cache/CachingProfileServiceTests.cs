@@ -1,19 +1,19 @@
-﻿using IdentityServer4.Models;
-using IdentityServer4.Services;
-using Moq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-using FluentAssertions;
-using Microsoft.Extensions.Logging;
 using System.Threading;
+using System.Threading.Tasks;
+using FluentAssertions;
+using IdentityServer4.Armut.RedisStore.Cache;
+using IdentityServer4.Armut.RedisStore.Extensions;
+using IdentityServer4.Armut.RedisStore.Tests.Fakes;
+using IdentityServer4.Models;
 using Microsoft.Extensions.Caching.Memory;
-using FakeItEasy;
+using Microsoft.Extensions.Logging;
+using Moq;
+using Xunit;
 
-namespace IdentityServer4.Contrib.RedisStore.Tests.Cache
+namespace IdentityServer4.Armut.RedisStore.Tests.UnitTesting.Cache
 {
     public class CachingProfileServiceTests
     {
